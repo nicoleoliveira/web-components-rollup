@@ -44,9 +44,15 @@ export default class Button extends HTMLElement {
     this.render();
   }
 
+  onClick() {
+    if(!this.disabled) {
+      this.dispatchEvent(this.click);
+    }
+  }
+
   attributeChangedCallback(prop, oldValue, newValue) {
     this.render();
-    this.addEventListener('click', () => !this.disabled && this.dispatchEvent(this.click));
+    this.addEventListener('click', this.onClick);
   }
   
   render() {

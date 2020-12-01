@@ -1,8 +1,11 @@
 :host {
-    --button-primary-background-color: #ffd464;
-    --button-default-background-color: white;
-    --button-secondary-background-color: #8241a4;
-  }
+  --color-primary-default: #ffd464;
+  --color-secondary-default: #8241a4;
+
+  --button-primary-background-color: var(--color-primary, var(--color-primary-default));
+  --button-default-background-color: white;
+  --button-secondary-background-color: var(--color-secondary, var(--color-secondary-default));
+}
   
   button {
     border-radius: 3px;
