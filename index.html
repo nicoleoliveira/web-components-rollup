@@ -12,8 +12,10 @@
     
         wcpr-button.teste {
           --button-primary-background-color: blue;
+          /* color: palegreen; */
         }
       </style>
+      <!-- <link rel="stylesheet" href="http://127.0.0.1:8080/theme.css"> -->
 </head>
 <body>
     <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
@@ -21,16 +23,16 @@
     <script src="./dist/main.js"></script>
     <h1>Hello</h1>
 
-    <wcpr-button label="default"></wcpr-button>
-    <wcpr-button label="default | disabled" disabled="true"></wcpr-button>
+    <!-- <wcpr-button label="default"></wcpr-button>
+    <wcpr-button label="default | disabled" disabled="true"></wcpr-button> -->
     <wcpr-button label="deve ser azul" class="teste" type="primary"></wcpr-button>
-    <wcpr-button label="deve ser amarelo" type="primary"></wcpr-button>
+    <!-- <wcpr-button label="deve ser amarelo" type="primary"></wcpr-button>
     <wcpr-button label="primary | disabled" type="primary" disabled="true"></wcpr-button>
-    <wcpr-button label="secondary" type="secondary"></wcpr-button>
-    <wcpr-button label="secondary | disabled" type="secondary" disabled="true"></wcpr-button>
+    <!-- <wcpr-button label="secondary" type="secondary"></wcpr-button> -->
+    <wcpr-button label="secondary | disabled" type="secondary" disabled="true"></wcpr-button> -->
   
   
-    <wcpr-button label="Muda tema" type="primary" id="mudaTema"></wcpr-button>
+    <!-- <wcpr-button label="Muda tema" type="primary" id="mudaTema"></wcpr-button> -->
 
 
     <script>
@@ -58,15 +60,15 @@
           }
           `
     
-        const button = document.getElementById('mudaTema').addEventListener('clickButton', () => {
-          const sheet = new CSSStyleSheet();
+        // const button = document.getElementById('mudaTema').addEventListener('clickButton', () => {
+        //   const sheet = new CSSStyleSheet();
     
-          const theme = darkMode ? lightRule : darkRule;
-          console.log('theme:', darkMode ? 'lightRule' : 'darkRule');
-          sheet.replaceSync(theme);
-          darkMode = !darkMode;
-          document.adoptedStyleSheets = [sheet];
-        });
+        //   const theme = darkMode ? lightRule : darkRule;
+        //   console.log('theme:', darkMode ? 'lightRule' : 'darkRule');
+        //   sheet.replaceSync(theme);
+        //   darkMode = !darkMode;
+        //   document.adoptedStyleSheets = [sheet];
+        // });
       </script>
   
 </body>

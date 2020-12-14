@@ -57,14 +57,18 @@ export default class Button extends HTMLElement {
   
   render() {
     this.shadow.innerHTML = `
-            <link rel="stylesheet" href="${stylePath}"/>
-            <button
-                class="${this.type} ${this.disabled}">
-                ${this.label}
-            </button>
-        `;
+    <link rel="stylesheet" href="${stylePath}"/>
+    <button
+    class="${this.type} ${this.disabled}">
+    ${this.label}
+    </button>
+    `;
+    console.log('variable:', this.shadowRoot.styleSheets);
+    // console.log('variable:', this.style.getPropertyValue('--button-primary-background-color'));
   }
 
 }
 
 customElements.define('wcpr-button', Button);
+
+// window.getComputedStyle(document.getElementsByTagName('wcpr-button')[0]).getPropertyValue("--color-primary-default");
